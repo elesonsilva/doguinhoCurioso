@@ -6,8 +6,9 @@ header{
     width: 100%;
     padding: 10px;
     gap: 25%;
+    background-color: var(--cor-ternaria);
     strong{
-        color: var(--texto-colorp2);
+        color: var(--cor-secundaria);
         font-size: 18px;
     }
     nav{
@@ -15,10 +16,10 @@ header{
         gap: 20px;
         a{
             text-decoration: none;
-            color: black;
+            color: var(--cor-primaria);
             font-weight: 600;
             &:hover{
-                color: var(--texto-colorp1);
+                color: var(--cor-secundaria);
             }
         }
     }
