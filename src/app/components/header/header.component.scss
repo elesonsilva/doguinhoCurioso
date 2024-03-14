@@ -8,9 +8,17 @@ header{
     gap: 25%;
     background-color: var(--cor-ternaria);
     z-index: 333;
+    .logo{
+        display: flex;
+        align-items: center;
+        img{
+            width: 50px;
+        }
+    }
     strong{
         color: var(--cor-secundaria);
-        font-size: 18px;
+        font-size: 24px;
+        font-weight: 800;
     }
     nav{
         display: flex;

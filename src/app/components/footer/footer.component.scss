@@ -7,4 +7,56 @@ footer{
     align-items: center;
     justify-content: center;
     gap: 200px;
+    .logo-footer{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        img{
+            width: 100px;
+        }
+        .group-icon{
+            display: flex;
+            gap: 10px;
+
+        }
+    }
+    .contato{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        strong{
+            font-size: 18px;
+        }
+        .link{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: center;
+            a{
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.781);
+                &:hover{
+                    color: white;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .api{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        strong{
+            font-size: 18px;
+        }
+        a{
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.781);
+            &:hover{
+                color: white;
+                text-decoration: underline;
+            }
+        }
+    }
 }
