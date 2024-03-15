@@ -1,6 +1,5 @@
 <section>
-    <div class="racas" *ngFor="let raca of racas">
+    <div class="racas" *ngFor="let raca of racas$ | async">
         <img [src]="raca.url" alt="">
-        <strong>{{raca.id}}</strong>
     </div>
 </section>

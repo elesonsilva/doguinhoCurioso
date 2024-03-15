@@ -3,6 +3,7 @@ import { environment } from '../../../../environments/environment';
 import { RacasService } from '../../../services/racas.service';
 import { racas } from '../../../Models/racas.model';
 import { CommonModule } from '@angular/common';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-racas',
@@ -12,7 +13,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './racas.component.scss'
 })
 export class RacasComponent {
-  racas: racas[]=[];
+ // racas: racas[]=[];
+ racas$= new Observable<racas[]>(); 
 
   constructor(private racasServices:RacasService){
     //console.log(environment.api)
@@ -20,6 +22,7 @@ export class RacasComponent {
   }
 
   obterRacasInicial(){
-    this.racasServices.obterRacas().subscribe(racas=> this.racas = racas)
+   // this.racasServices.obterRacas().subscribe(racas=> this.racas = racas)
+   this.racas$ = this.racasServices.obterRacas();
   }
 }
