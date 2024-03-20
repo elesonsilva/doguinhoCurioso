@@ -1,3 +1,4 @@
 export const environment = {
-    api:'https://api.thedogapi.com'
+    apidog:'https://api.thedogapi.com',
+    apicat:'https://api.thecatapi.com'
 };

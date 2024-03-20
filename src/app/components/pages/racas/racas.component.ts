@@ -23,6 +23,6 @@ export class RacasComponent {
 
   obterRacasInicial(){
    // this.racasServices.obterRacas().subscribe(racas=> this.racas = racas)
-   this.racas$ = this.racasServices.obterRacas();
+   this.racas$ = this.racasServices.obterRacasDogs();
   }
 }

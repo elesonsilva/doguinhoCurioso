@@ -1,0 +1,18 @@
+<section class="racas-conteiner">
+    <div class="conteiner-inicial">
+        <h1>Veja todas as raças de <strong>Gatinhos!</strong></h1>
+            <form>
+                <input type="text" placeholder="Digite o nome da raça">
+            </form>
+    </div>
+    <div class="conteiner">
+        <div class="racas" *ngFor="let gato of gatos$ | async">
+            <img [src]="gato.url" alt="">
+            <div class="detalhe-raca" *ngFor="let detalhe of gato.breeds">
+                <p>{{ detalhe.name }}</p>
+                <button>Ver Detalhe</button>
+            </div>    
+        </div>
+    </div>
+</section>
+

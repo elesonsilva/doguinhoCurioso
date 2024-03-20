@@ -7,15 +7,24 @@ import { racas } from '../Models/racas.model';
 })
 export class RacasService {
 
-  header = new HttpHeaders({
+  headerDog = new HttpHeaders({
     'x-api-key':'live_IzZ7UeqzEaR5xx26QoJPsLMSBEqKf68zw2skJpUC6XC88QpvZPbByrGlJWY9ddiN'
   });
 
-  private url = environment.api
+  headerCat = new HttpHeaders({
+    'x-api-key':'live_Sy68LIf4CTUMdfjF9dvuxO0PHQT4AGu1f0STj49SvsZcBOdE41RqVOCc75RU677N'
+  });
 
+  private urldog = environment.apidog;
+  private urlcat = environment.apicat;
+  
   constructor(private httpclient:HttpClient) { }
 
-  obterRacas(){
-    return this.httpclient.get<racas[]>(this.url + '/v1/images/search?limit=20',{headers: this.header})
+  obterRacasDogs(){
+    return this.httpclient.get<racas[]>(this.urldog + '/v1/images/search?limit=20',{headers: this.headerDog})
+  }
+
+  obterRacasGatos(){
+    return this.httpclient.get<racas[]>(this.urlcat + '/v1/images/search?limit=20',{headers: this.headerCat})
   }
 }
