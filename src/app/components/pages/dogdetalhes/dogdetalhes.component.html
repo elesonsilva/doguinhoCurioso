@@ -1,0 +1,12 @@
+<div *ngIf="raca">
+    <h2>{{ raca.name }}</h2>
+    <img [src]="raca.url" alt="">
+    <p>Weight (imperial): {{ raca.weight.imperial }}</p>
+    <p>Weight (metric): {{ raca.weight.metric }}</p>
+    <p>Temperament: {{ raca.temperament }}</p>
+    <p>Origin: {{ raca.origin }}</p>
+    <p>Country Codes: {{ raca.country_codes }}</p>
+    <p>Country Code: {{ raca.country_code }}</p>
+    <p>Life Span: {{ raca.life_span }}</p>
+    <p>Wikipedia URL: <a href="{{ raca.wikipedia_url }}" target="_blank">{{ raca.wikipedia_url }}</a></p>
+  </div>

@@ -10,7 +10,7 @@
             <img [src]="raca.url" alt="">
             <div class="detalhe-raca" *ngFor="let detalhe of raca.breeds">
                 <p>{{ detalhe.name }}</p>
-                <button>Ver Detalhe</button>
+                <button (click)="verDetalhe(raca.id)">Ver Detalhe</button>
             </div>    
         </div>
     </div>
