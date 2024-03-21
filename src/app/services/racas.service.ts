@@ -37,4 +37,14 @@ export class RacasService {
   obterRacasGatos(){
     return this.httpclient.get<racas[]>(this.urlcat + '/v1/images/search?limit=20',{headers: this.headerCat})
   }
+
+  getRacasCatDetails(id:string):Observable<any>{
+    return this.httpclient.get<any>(this.urlcat + `/v1/images/${id}`, {headers:this.headerCat}).pipe(
+      map(reponse =>{
+        const gato = reponse.breeds[0];
+        gato.url = reponse.url;
+        return gato;
+      })
+    )
+  }
 }

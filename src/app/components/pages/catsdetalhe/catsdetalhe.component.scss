@@ -1,0 +1,63 @@
+.conteiner-detalhes{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    gap: 50px;
+    .nome-raca{
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+        width: 40%;
+        gap: 15px;
+        h2{
+            font-size: 58px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            line-height: 48px;
+        }
+        p{
+            color: var(--cor-ternaria);
+            font-weight: 400;
+        }
+    }
+    .detalhes{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 50px;
+        .conteiner-especifidades{
+            display: flex;
+            margin-left: 10%;
+            gap: 35px;
+            .especifidade{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                strong{
+                    font-size: 16px;
+                    border-bottom: 2px solid var(--cor-ternaria);
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+        .link-externo{
+            margin-left: 10%;
+            display: flex;
+            gap: 5px;
+            a{
+                text-decoration: none;
+                color: var(--cor-ternaria);
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+<div *ngIf="gato" class="conteiner-detalhes" [ngStyle]="{'background-image': 'linear-gradient(to top, #000000, transparent), url(' + gato.url + ')'}">
+    <div class="nome-raca">
+      <h2>{{ gato.name }}</h2>
+      <p>{{gato.temperament}}</p>
+      </div>  
+      <div class="detalhes">
+        <div class="conteiner-especifidades">
+          <div class="especifidade">
+            <strong>Peso</strong>
+            <p>{{gato.weight.imperial}}kg</p>
+          </div>
+          <div class="especifidade">
+            <strong>Tamanho</strong>
+            <p> {{gato.weight.metric}}</p>
+          </div>
+          <div class="especifidade">
+            <strong>Origem</strong>
+            <p> {{ gato.origin }}</p>
+          </div>
+          <div class="especifidade">
+            <strong>Códigos de país</strong>
+            <p> {{ gato.country_codes }}</p>
+          </div>
+          <div class="especifidade">
+            <strong>Tempo de vida</strong>
+            <p>{{gato.life_span}}</p>
+          </div>
+        </div>
+        <div class="link-externo">
+          <strong>Wikipedia URL:</strong>
+          <a href="{{ gato.wikipedia_url }}" target="_blank">{{ gato.wikipedia_url }}</a>
+        </div>
+      </div>
+    </div>
