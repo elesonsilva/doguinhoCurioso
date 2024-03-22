@@ -34,6 +34,12 @@ export class RacasService {
       })
     );
   }
+
+
+  obterRacasPorNome(nome: string) {
+    return this.httpclient.get<racas[]>(this.urldog + `/v1/images/search?limit=20&breed_ids=${nome}`, { headers: this.headerDog });
+  }
+  
   obterRacasGatos(){
     return this.httpclient.get<racas[]>(this.urlcat + '/v1/images/search?limit=20',{headers: this.headerCat})
   }

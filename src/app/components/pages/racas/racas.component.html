@@ -2,7 +2,7 @@
     <div class="conteiner-inicial">
         <h1>Veja todas as raças de <strong>Doguinhos!</strong></h1>
             <form>
-                <input type="text" placeholder="Digite o nome da raça">
+                <input type="text" placeholder="Digite o nome da raça" [(ngModel)]="termodepesquisa" name="termodepesquisa" (input)="pesquisar()">
             </form>
     </div>
     <div class="conteiner">
