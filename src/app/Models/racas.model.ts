@@ -15,6 +15,7 @@ export interface racas{
         origin: string;
         country_codes: string;
         country_code: string;
+        description:string;
         life_span: string;
         wikipedia_url: string;
     }[];
