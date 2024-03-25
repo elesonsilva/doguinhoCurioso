@@ -6,10 +6,11 @@ import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { MatProgressSpinner } from '@angular/material/progress-spinner';
 @Component({
   selector: 'app-racas',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, MatProgressSpinner],
   templateUrl: './racas.component.html',
   styleUrl: './racas.component.scss'
 })
@@ -18,6 +19,7 @@ export class RacasComponent {
   racas$= new Observable<racas[]>(); 
   
    termodepesquisa: string = '';
+   estacarregando :boolean= true;
   
   constructor(private racasServices:RacasService,
     private router:Router){
@@ -27,8 +29,11 @@ export class RacasComponent {
     
     obterRacasInicial(){
       // this.racasServices.obterRacas().subscribe(racas=> this.racas = racas)
+      this.estacarregando = true;
       this.racas$ = this.racasServices.obterRacasDogs();
-      
+      this.racas$.subscribe(()=>{
+        this.estacarregando = false;
+      })
     }
     
     verDetalhe(id:string){

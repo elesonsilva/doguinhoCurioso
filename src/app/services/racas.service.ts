@@ -66,6 +66,17 @@ export class RacasService {
     )
   }
   obterGatosPorNome(nome:string){
-    return this.httpclient.get<racas[]>(this.urlcat + `/v1/images/search?limit=20&breed_ids=${nome}&include_breeds=true`, {headers: this.headerCat})
+    //return this.httpclient.get<racas[]>(this.urlcat + `/v1/images/search?limit=20&breed_ids=${nome}&include_breeds=true`, {headers: this.headerCat})
+    return this.httpclient.get<any[]>(this.urlcat + `/v1/breeds`, {headers: this.headerCat}).pipe(
+      switchMap((res)=>{
+        const racaGatos = res.filter(racagato=> racagato.name.toLowerCase().includes(nome.toLowerCase()));
+        if(racaGatos.length>0){
+          const racaId = racaGatos.map(breed => breed.id);
+          return this.httpclient.get<racas[]>(this.urlcat + `/v1/images/search?limit=20&breed_ids=${racaId.join(',')}`, {headers: this.headerCat});
+        }else{
+          return of([])
+        }
+      })
+    )
   }
 }

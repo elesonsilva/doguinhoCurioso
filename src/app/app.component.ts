@@ -5,6 +5,7 @@ import { HeaderComponent } from "./components/header/header.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { HomeComponent } from "./components/pages/home/home.component";
 import { HttpClientModule } from '@angular/common/http';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
     imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, HomeComponent, RouterLink,
-    HttpClientModule]
+    HttpClientModule, MatProgressSpinnerModule]
 })
 export class AppComponent {
   title = 'doguinhocurioso';
