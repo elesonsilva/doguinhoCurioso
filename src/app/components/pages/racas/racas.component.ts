@@ -7,10 +7,11 @@ import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MatProgressSpinner } from '@angular/material/progress-spinner';
+import { CarregadorComponent } from '../../carregador/carregador.component';
 @Component({
   selector: 'app-racas',
   standalone: true,
-  imports: [CommonModule, FormsModule, MatProgressSpinner],
+  imports: [CommonModule, FormsModule, MatProgressSpinner, CarregadorComponent],
   templateUrl: './racas.component.html',
   styleUrl: './racas.component.scss'
 })
