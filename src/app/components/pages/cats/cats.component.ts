@@ -5,16 +5,17 @@ import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { CarregadorCatComponent } from '../../carregador-cat/carregador-cat.component';
 @Component({
   selector: 'app-cats',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, CarregadorCatComponent],
   templateUrl: './cats.component.html',
   styleUrl: './cats.component.scss'
 })
 export class CatsComponent {
  gatos$ = new Observable<racas[]>()
-
+ carregandopagina: boolean =true;
  gatoPesquisa : string =''
  constructor(private racasservice:RacasService,
             private router:Router){
@@ -22,7 +23,11 @@ export class CatsComponent {
  }
 
  obterRacasGatosInicial(){
+  this.carregandopagina = true
   this.gatos$ = this.racasservice.obterRacasGatos();
+  this.gatos$.subscribe(()=>{
+    this.carregandopagina=false;
+  })
  }
 
  verdetalhe(id: string){

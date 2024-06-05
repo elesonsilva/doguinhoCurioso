@@ -1,4 +1,5 @@
-<section class="racas-conteiner">
+<app-carregador-cat *ngIf="carregandopagina"></app-carregador-cat>
+<section class="racas-conteiner" *ngIf="!carregandopagina">
     <div class="conteiner-inicial">
         <h1>Veja todas as raças de <strong>Gatinhos!</strong></h1>
             <form>
@@ -15,4 +16,5 @@
         </div>
     </div>
 </section>
+
 
