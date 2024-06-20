@@ -8,20 +8,23 @@ import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { CarregadorComponent } from '../../carregador/carregador.component';
-import { ModalComponent } from '../../modal/modal.component';
+
 @Component({
   selector: 'app-racas',
   standalone: true,
-  imports: [CommonModule, FormsModule, MatProgressSpinner, CarregadorComponent, ModalComponent],
+  imports: [CommonModule, FormsModule, MatProgressSpinner, CarregadorComponent],
   templateUrl: './racas.component.html',
   styleUrl: './racas.component.scss'
 })
 export class RacasComponent {
+
   // racas: racas[]=[];
   racas$= new Observable<racas[]>(); 
   
    termodepesquisa: string = '';
    estacarregando :boolean= true;
+   modal:boolean = false;
+   imagemraca : any;
   
   constructor(private racasServices:RacasService,
     private router:Router){
@@ -49,7 +52,14 @@ export class RacasComponent {
         this.obterRacasInicial();
       }
     }
-    verImagen(){
-      alert('clicou na imagem');
+    verImagen(id:string){
+      this.modal= true;
+      this.racasServices.getRacaDogDetails(id).subscribe(data=>{
+        this.imagemraca = data;
+      })
     }
+
+    fechaModal() {
+      this.modal = false;
+      }
   }

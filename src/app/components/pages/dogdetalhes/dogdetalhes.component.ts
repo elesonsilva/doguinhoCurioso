@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 export class DogdetalhesComponent implements OnInit {
   racaId!: string|null;
   raca: any; 
+  
 
   constructor(private route: ActivatedRoute, private racasService: RacasService) { }
 
@@ -28,4 +29,6 @@ export class DogdetalhesComponent implements OnInit {
       this.raca = data;
     });
   }
+
+  
 }

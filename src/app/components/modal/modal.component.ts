@@ -11,6 +11,6 @@ export class ModalComponent {
   modal:boolean= true;
 
   fechaModal(){
-    this.modal= false
+    this.modal= false;
   }
 }

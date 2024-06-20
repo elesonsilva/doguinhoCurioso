@@ -3,7 +3,8 @@
     <div class="conteiner-inicial">
         <h1>Veja todas as raças de <strong>Doguinhos!</strong></h1>
             <form>
-                <input type="text" placeholder="Digite o nome da raça" [(ngModel)]="termodepesquisa" name="termodepesquisa" (input)="pesquisar()">
+                <input type="text" placeholder="Digite o nome da raça" 
+                [(ngModel)]="termodepesquisa" name="termodepesquisa" (input)="pesquisar()">
             </form>
     </div>
     
@@ -13,12 +14,19 @@
    -->
     <div class="conteiner">
         <div class="racas" *ngFor="let raca of racas$ | async">
-            <img [src]="raca.url" alt="" (click)="verImagen()">
+            <img [src]="raca.url" alt="" (click)="verImagen(raca.id)">
             <div class="detalhe-raca" *ngFor="let detalhe of raca.breeds">
                 <p>{{ detalhe.name }}</p>
                 <button (click)="verDetalhe(raca.id)">Ver Detalhe</button>
             </div>    
         </div>
+    </div>
+    <div id="myModal" class="modal" *ngIf="modal">
+        <div class="modal-conteudo" *ngIf="imagemraca">
+          <span class="close" (click)="fechaModal()">&times;</span>
+          <h2>{{imagemraca.name}}</h2>
+          <img [src]="imagemraca.url" alt="">
+        </div>  
     </div>
 </section>
 
