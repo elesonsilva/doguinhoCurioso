@@ -13,7 +13,7 @@
    -->
     <div class="conteiner">
         <div class="racas" *ngFor="let raca of racas$ | async">
-            <img [src]="raca.url" alt="">
+            <img [src]="raca.url" alt="" (click)="verImagen()">
             <div class="detalhe-raca" *ngFor="let detalhe of raca.breeds">
                 <p>{{ detalhe.name }}</p>
                 <button (click)="verDetalhe(raca.id)">Ver Detalhe</button>

@@ -8,10 +8,11 @@ import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { CarregadorComponent } from '../../carregador/carregador.component';
+import { ModalComponent } from '../../modal/modal.component';
 @Component({
   selector: 'app-racas',
   standalone: true,
-  imports: [CommonModule, FormsModule, MatProgressSpinner, CarregadorComponent],
+  imports: [CommonModule, FormsModule, MatProgressSpinner, CarregadorComponent, ModalComponent],
   templateUrl: './racas.component.html',
   styleUrl: './racas.component.scss'
 })
@@ -47,5 +48,8 @@ export class RacasComponent {
       } else {
         this.obterRacasInicial();
       }
+    }
+    verImagen(){
+      alert('clicou na imagem');
     }
   }

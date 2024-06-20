@@ -7,6 +7,7 @@ import { DogdetalhesComponent } from './components/pages/dogdetalhes/dogdetalhes
 import { CatsdetalheComponent } from './components/pages/catsdetalhe/catsdetalhe.component';
 import { CarregadorComponent } from './components/carregador/carregador.component';
 import { CarregadorCatComponent } from './components/carregador-cat/carregador-cat.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 export const routes: Routes = [
     {path:'', component:HomeComponent},
@@ -16,5 +17,6 @@ export const routes: Routes = [
     {path:'dogs/:id', component:DogdetalhesComponent},
     {path:'cats/:id', component:CatsdetalheComponent},
     {path:'carregador', component:CarregadorComponent},
-    {path:'carregadorCat', component:CarregadorCatComponent}
+    {path:'carregadorCat', component:CarregadorCatComponent},
+    {path:'modal', component:ModalComponent}
 ];
