@@ -1,4 +1,7 @@
-<header>
+<div class="menu" (click)="abrirmenu()">
+    <i class="material-icons">{{ menu ? "close" : "menu" }}</i>
+</div>
+<header [class.menuAberto]="menu">
     <div class="logo">
         <img src="../../../assets/imagens/logo-transparente.png" alt=""><strong>DoguinhoCurioso</strong>
     </div>

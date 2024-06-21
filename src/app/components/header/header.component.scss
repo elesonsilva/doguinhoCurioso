@@ -1,3 +1,7 @@
+.menu{
+    display: none;
+    
+}
 header{
     display: flex;
     align-items: center;
@@ -31,6 +35,50 @@ header{
             &:hover{
                 color: var(--cor-secundaria);
             }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    
+    .menu{
+        position: fixed;
+        top: 0;
+        display: flex;
+        background-color: var(--cor-ternaria);
+        width: 100%;
+        z-index: 444;
+        
+        i{
+            color: var(--cor-secundaria);
+            margin: 5px;
+        }
+    }
+    header{
+        width: 0%;
+        height: 100vh;
+        position: fixed;
+        z-index: 333;
+        display: flex;
+        left: -100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+        &.menuAberto{
+            width: 70%;
+            left: 0;
+        }
+        .logo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
         }
     }
 }

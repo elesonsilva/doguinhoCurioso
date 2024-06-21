@@ -8,5 +8,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  menu: boolean = false
 
+  abrirmenu(){
+    this.menu = !this.menu;
+  }
 }
