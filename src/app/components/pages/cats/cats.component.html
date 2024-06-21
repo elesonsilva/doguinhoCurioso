@@ -8,12 +8,19 @@
     </div>
     <div class="conteiner">
         <div class="racas" *ngFor="let gato of gatos$ | async">
-            <img [src]="gato.url" alt="">
+            <img [src]="gato.url" alt="" (click)="verImagen(gato.id)">
             <div class="detalhe-raca" *ngFor="let detalhe of gato.breeds">
                 <p>{{ detalhe.name }}</p>
                 <button (click)="verdetalhe(gato.id)">Ver Detalhe</button>
             </div>    
         </div>
+    </div>
+    <div id="myModal" class="modal" *ngIf="modal">
+        <div class="modal-conteudo" *ngIf="imagemraca">
+          <span class="close" (click)="fechaModal()">&times;</span>
+          <h2>{{imagemraca.name}}</h2>
+          <img [src]="imagemraca.url" alt="">
+        </div>  
     </div>
 </section>
 

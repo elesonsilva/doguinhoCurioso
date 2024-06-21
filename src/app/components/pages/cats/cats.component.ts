@@ -17,6 +17,10 @@ export class CatsComponent {
  gatos$ = new Observable<racas[]>()
  carregandopagina: boolean =true;
  gatoPesquisa : string =''
+
+ modal : boolean = false;
+ imagemraca: any;
+
  constructor(private racasservice:RacasService,
             private router:Router){
   this.obterRacasGatosInicial();
@@ -40,5 +44,16 @@ export class CatsComponent {
     }else{
       this.obterRacasGatosInicial();
     }
+ }
+
+ verImagen(id:string){
+  this.modal= true;
+  this.racasservice.getRacasCatDetails(id).subscribe(data=>{
+    this.imagemraca = data
+  })
+ }
+
+ fechaModal(){
+  this.modal = false;
  }
 }

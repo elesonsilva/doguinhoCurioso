@@ -52,6 +52,7 @@ export class RacasComponent {
         this.obterRacasInicial();
       }
     }
+
     verImagen(id:string){
       this.modal= true;
       this.racasServices.getRacaDogDetails(id).subscribe(data=>{

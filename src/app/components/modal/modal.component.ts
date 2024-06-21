@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RacasService } from '../../services/racas.service';
 @Component({
   selector: 'app-modal',
   standalone: true,
@@ -8,9 +9,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './modal.component.scss'
 })
 export class ModalComponent {
-  modal:boolean= true;
+ 
 
-  fechaModal(){
-    this.modal= false;
-  }
+ constructor(private racasServices:RacasService){}
+
+ 
 }
