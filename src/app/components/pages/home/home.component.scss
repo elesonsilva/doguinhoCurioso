@@ -1,6 +1,6 @@
 .conteiner-incial{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(../../../../assets/imagens/bk.png);
     background-size: contain;
     display: flex;
@@ -75,10 +75,11 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     .servicos{
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-direction: column;
         gap: 10px;
         margin-top: 20px;
@@ -97,11 +98,12 @@
     }
     .conteiner-catdog{
         display: flex;
-        width: 80%;
+        width: 85%;
         align-items: center;
         justify-content: center;
         margin-top: 20px;
         gap: 25px;
+        flex-wrap: wrap;
         .card{
            display: flex;
            flex-direction: column;
@@ -322,3 +324,83 @@
     clip-path: polygon(0 36%,100% 10%,100% 100%,0% 100%);
    
 } 
+
+@media screen and (max-width: 600px) {
+    .conteiner-incial{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        .img-inicial{
+            display: flex;
+            
+            justify-content: center;
+            height: 30vh;
+            img{
+                position: absolute;
+                bottom: 0;
+                width: 70%;
+            }
+        }
+        .titulo{
+            width: 80%;
+        }
+    }
+    .selecao-de-amigo{
+        display: flex;
+        align-items: center;
+        .servicos{
+            display: flex;
+            align-items: center;
+            h3{
+                text-align: center;
+            }
+        }
+        .conteiner-catdog{
+            gap: 24px;
+            .card{
+                width: 90%;
+                gap: 24px;
+                .fundo{
+                    width: 100%;
+                    height: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                strong{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .conteiner-cat{
+        .img-cat{
+            width: 34%;
+            
+            img{
+                width: 450px;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+        .text-api-cat{
+            padding: 12px;
+            width: 80%;
+            display: flex;
+            align-items: flex-end;
+            strong{
+                font-size: 24px;
+            }
+            p{
+                font-size: 16px;
+            }
+            button{
+                width: 45%;
+            }
+        }
+    }
+
+}
