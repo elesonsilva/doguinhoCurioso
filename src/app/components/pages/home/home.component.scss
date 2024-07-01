@@ -346,6 +346,7 @@
         }
         .titulo{
             width: 80%;
+            height: 40vh;
         }
     }
     .selecao-de-amigo{
@@ -359,7 +360,7 @@
             }
         }
         .conteiner-catdog{
-            gap: 24px;
+            gap: 48px;
             .card{
                 width: 90%;
                 gap: 24px;
@@ -381,7 +382,7 @@
             width: 34%;
             
             img{
-                width: 450px;
+                width: 380px;
                 position: absolute;
                 bottom: 0;
             }
@@ -408,6 +409,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 24px;
         .text-api-dog{
             width: 90%;
             .conteudo{
@@ -416,9 +418,27 @@
             }
         }
         .img-dog{
+            display: flex;
             align-items: center;
             justify-content: center;
-            
+            width: 90%;
+            img{
+                height: 40vh;
+            }
+        }
+    }
+    .banner-final{
+        height: 100vh;
+        .banner{
+            display: flex;
+            flex-direction: column;
+            height: 90vh;
+            .text-banner{
+                text-align: center;
+            }
+            img{
+                width: 250px;
+            }
         }
     }
 }
