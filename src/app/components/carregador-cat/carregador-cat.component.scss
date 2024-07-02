@@ -178,3 +178,13 @@
         }
     }
 }
+@media screen and (max-width:600px) {
+    .carregador{
+        .container{
+            strong{
+                position: absolute;
+                margin-top: 100px;
+            }
+        }   
+    }
+}
