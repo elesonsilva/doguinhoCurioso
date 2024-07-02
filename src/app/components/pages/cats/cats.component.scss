@@ -129,3 +129,17 @@
         }
     }
 }
+
+@media screen and (max-width:600px) {
+    .racas-conteiner{
+        .conteiner-inicial{
+            h1{
+                text-align: center;
+            }
+            form{
+                width: 350px;
+            }
+        }
+
+    }
+}
