@@ -8,6 +8,8 @@ import { CatsdetalheComponent } from './components/pages/catsdetalhe/catsdetalhe
 import { CarregadorComponent } from './components/carregador/carregador.component';
 import { CarregadorCatComponent } from './components/carregador-cat/carregador-cat.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { SobreComponent } from './components/pages/sobre/sobre.component';
+
 
 export const routes: Routes = [
     {path:'', component:HomeComponent},
@@ -18,5 +20,6 @@ export const routes: Routes = [
     {path:'cats/:id', component:CatsdetalheComponent},
     {path:'carregador', component:CarregadorComponent},
     {path:'carregadorCat', component:CarregadorCatComponent},
-    {path:'modal', component:ModalComponent}
+    {path:'modal', component:ModalComponent},
+    {path:'sobre', component:SobreComponent}  
 ];
