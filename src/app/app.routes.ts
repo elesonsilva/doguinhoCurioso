@@ -9,6 +9,7 @@ import { CarregadorComponent } from './components/carregador/carregador.componen
 import { CarregadorCatComponent } from './components/carregador-cat/carregador-cat.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { SobreComponent } from './components/pages/sobre/sobre.component';
+import { ContatoComponent } from './components/pages/contato/contato.component';
 
 
 export const routes: Routes = [
@@ -21,5 +22,7 @@ export const routes: Routes = [
     {path:'carregador', component:CarregadorComponent},
     {path:'carregadorCat', component:CarregadorCatComponent},
     {path:'modal', component:ModalComponent},
-    {path:'sobre', component:SobreComponent}  
+    {path:'sobre', component:SobreComponent},
+    {path:'contato', component:ContatoComponent}
+    
 ];
