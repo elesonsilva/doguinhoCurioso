@@ -1,0 +1,29 @@
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    .contato{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .bloco-imagen{
+        width: 50%;
+        height: 100%;
+        background-color: var(--cor-ternaria);
+        display: flex;
+        flex-direction: column-reverse;
+        img{
+            width: 50%;
+        }
+    }
+}
